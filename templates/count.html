@@ -1,0 +1,22 @@
+<style>
+    a { text-decoration: none; color: black; }
+</style>
+
+<h1>There are {{ count }} words in your text</h1>
+
+<button><a href="{% url 'home' %}">Count more words</a></button>
+
+<h2>This is your text:</h2>
+
+{{ fulltext }}
+
+<h3>You highest count was {{ highestcount }} times that the word <em>"{{ highestword }}"</em> appeared</h3>
+
+{% for word, counttotal in items %}
+
+{{ word }} - {{ counttotal }}
+<br>
+
+{% endfor %}
+
+

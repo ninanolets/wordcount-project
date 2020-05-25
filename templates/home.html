@@ -1,0 +1,16 @@
+<style>
+    a { text-decoration: none; color: black }
+    input { cursor: pointer; }
+</style>
+
+<h1>WORD COUNT</h1>
+
+<button><a href="{% url 'aboutme' %}">ABOUT ME</a></button>
+<br><br>
+
+<form action="{% url 'count' %}">
+    <textarea name="fulltext" id="" cols="40" rows="10"></textarea>
+    <br><br>
+    <input type="submit" value="Count!" />
+</form>
+
